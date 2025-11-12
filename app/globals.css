@@ -99,6 +99,8 @@ html, body {
     font-size: 0.85rem;
     user-select: none;
     font-style: italic;
+    gap: 2rem;
+   
   }
   
   .page-content {

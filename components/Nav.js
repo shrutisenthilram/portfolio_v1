@@ -1,13 +1,24 @@
-import Link from 'next/link';
+"use client";
+import Link from "next/link";
+import Clock from "@/components/Clock";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Nav() {
   return (
-    <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc', marginBottom: '2rem' }}>
-      <Link href="/"><a style={{ marginRight: '1rem' }}>Home</a></Link>
-      <Link href="/about"><a style={{ marginRight: '1rem' }}>About Me</a></Link>
-      <Link href="/resume"><a style={{ marginRight: '1rem' }}>Resume</a></Link>
-      <Link href="/blog"><a style={{ marginRight: '1rem' }}>Blog</a></Link>
-      <Link href="/projects"><a>Projects</a></Link>
+    <nav className="flex justify-between items-center px-6 py-4 border-b border-gray-300 dark:border-gray-700">
+      {/* Left: Navigation Links */}
+      <div className="flex gap-6 text-gray-800 dark:text-gray-100 font-medium">
+        <Link href="/">Home</Link>
+        <Link href="/about">About Me</Link>
+        <Link href="/resume">Resume</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/projects">Projects</Link>
+      </div>
+
+      {/* Right: Clock + Theme Toggle */}
+      <div className="flex items-center gap-4">
+        <Clock />
+      </div>
     </nav>
-  )
+  );
 }
